@@ -1,0 +1,30 @@
+
+.container {
+    font-size: 1.8rem;
+    font-weight: 400;
+    color: #fff;
+    text-align: center;
+    margin: 0 auto;
+    width: fit-content;
+    margin-top: 30px;
+  }
+  
+  .cursor {
+    display: inline-block;
+    animation: blink 1s infinite;
+  }
+  
+  @keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+  
+  /* Classe para as palavras dinâmicas em azul */
+  .typed {
+    background: linear-gradient(300deg, #4e54c8, #8f94fb, #ef77d0);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
