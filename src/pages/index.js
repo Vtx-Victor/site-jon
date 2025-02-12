@@ -5,6 +5,8 @@ import Galeria from "@/components/Galeria";
 import Typewriter from "@/components/Typewriter";
 import GaleriaVideos from "@/components/GaleriaVideos";
 import VideosDestaque from "@/components/VideosDestaques";
+import Link from "next/link";
+
 
 export default function Home() {
   return (
@@ -27,9 +29,11 @@ export default function Home() {
             <p className={`${styles.subtitle} ${styles.animated}`}>
               Deixe-me mostrar como a magia do design pode elevar sua empresa para o próximo nível.
             </p>
-            <button className={`${styles.button} ${styles.animated}`}>
-              Despertar
-            </button>
+            <Link href="#galeria">
+              <button className={`${styles.button} ${styles.animated}`}>
+                Despertar
+              </button>
+            </Link>
             <div className={styles.descriçao}>
               <p className={`${styles.description} ${styles.animated}`}>
                 Atendo agências e empresas globais com projetos únicos de design e publicidade, incluindo
@@ -39,7 +43,9 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Galeria />
+        <div id="galeria">
+          <Galeria />
+        </div>
         <Typewriter />
         <div className={styles.containertiulo2}>
           <h1 className={styles.gradientTexttilulo2}>
@@ -49,7 +55,7 @@ export default function Home() {
             Potencialize suas estratégias de vendas com nossas animações.
           </p>
         </div>
-        <GaleriaVideos/>
+        <GaleriaVideos />
         <div className={styles.containertiulo2}>
           <h1 className={styles.gradientTexttilulo2}>
             Se precisar de um editor de videos...
@@ -58,7 +64,7 @@ export default function Home() {
             Confira alguns dos projetos de captação e pos-produção já realizados
           </p>
         </div>
-        <VideosDestaque/>
+        <VideosDestaque />
       </div>
     </>
   );
