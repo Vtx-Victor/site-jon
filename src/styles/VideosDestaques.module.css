@@ -1,0 +1,44 @@
+.destaqueContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 vídeos por linha */
+    gap: 20px; /* Espaço entre os vídeos */
+    justify-content: center;
+    margin-top: 40px;
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  
+  /* Container de cada vídeo */
+  .videoWrapper {
+    width: 100%;
+    height: 300px; /* Altura menor para ficar mais horizontal */
+    border-radius: 15px;
+    overflow: hidden;
+    background-color: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 6px 15px rgba(255, 255, 255, 0.1);
+  }
+  
+  /* Estilizando o vídeo para ocupar todo o espaço do container */
+  .video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Mantém a proporção sem distorcer */
+    border-radius: 15px;
+  }
+  
+  /* Responsividade: Ajusta para telas menores */
+  @media (max-width: 1024px) {
+    .destaqueContainer {
+      grid-template-columns: repeat(2, 1fr); /* 2 vídeos por linha */
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .destaqueContainer {
+      grid-template-columns: repeat(1, 1fr); /* 1 vídeo por linha */
+    }
+  }

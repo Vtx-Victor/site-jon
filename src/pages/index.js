@@ -3,6 +3,8 @@ import styles from "@/styles/Home.module.css";
 import NavBar from "@/components/NavBar";
 import Galeria from "@/components/Galeria";
 import Typewriter from "@/components/Typewriter";
+import GaleriaVideos from "@/components/GaleriaVideos";
+import VideosDestaque from "@/components/VideosDestaques";
 
 export default function Home() {
   return (
@@ -47,6 +49,16 @@ export default function Home() {
             Potencialize suas estratégias de vendas com nossas animações.
           </p>
         </div>
+        <GaleriaVideos/>
+        <div className={styles.containertiulo2}>
+          <h1 className={styles.gradientTexttilulo2}>
+            Se precisar de um editor de videos...
+          </h1>
+          <p className={styles.subtitle2}>
+            Confira alguns dos projetos de captação e pos-produção já realizados
+          </p>
+        </div>
+        <VideosDestaque/>
       </div>
     </>
   );

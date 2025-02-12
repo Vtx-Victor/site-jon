@@ -54,7 +54,6 @@
   animation-delay: 1s;
 }
 .container {
-  background-color: #0a0b1a;
   color: #fff;
   min-height: 100vh;
   display: flex;
@@ -113,7 +112,6 @@
 }
 
 .containertiulo2 {
-  background-color: #0a0b1a;
   padding: 50px;
   text-align: center;
 }
