@@ -1,0 +1,16 @@
+.conteiner{
+    background-color: rgb(222 227 229);
+    height: 50vh;
+}
+
+.conteinerItens{
+    display: flex;
+    justify-content: center;
+    height: 10vh;
+}
+
+.titulo{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}

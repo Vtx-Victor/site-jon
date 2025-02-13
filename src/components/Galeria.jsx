@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "@/styles/Galeria.module.css";
-import ScrollReveal from "@/hook/ScrollReveal";
+import ScrollReveal from "@/hooks/ScrollReveal";
 
 const imagesData = [
   { id: 1, category: "identidade visual", src: "/img/ec89aec6-46b4-4d24-b8e3-feccd9f2615b.webp" },

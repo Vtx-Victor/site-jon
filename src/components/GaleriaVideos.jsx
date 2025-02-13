@@ -1,6 +1,6 @@
 import { useState } from "react";
 import styles from "@/styles/GaleriaVideos.module.css";
-import ScrollReveal from "@/hook/ScrollReveal";
+import ScrollReveal from "@/hooks/ScrollReveal";
 
 const GaleriaVideos = () => {
   const videos = [

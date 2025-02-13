@@ -1,7 +1,7 @@
 // components/VideosDestaque.js
 import { useState } from "react";
 import styles from "@/styles/VideosDestaques.module.css";
-import ScrollReveal from "@/hook/ScrollReveal";
+import ScrollReveal from "@/hooks/ScrollReveal";
 
 const VideosDestaque = () => {
   // Lista de vídeos maiores

@@ -6,7 +6,9 @@ import Typewriter from "@/components/Typewriter";
 import GaleriaVideos from "@/components/GaleriaVideos";
 import VideosDestaque from "@/components/VideosDestaques";
 import Link from "next/link";
-import ScrollReveal from "@/hook/ScrollReveal";
+import ScrollReveal from "@/hooks/ScrollReveal";
+import Parceiros from "@/components/Parceiros";
+import Equipe from "@/components/Equipe";
 
 export default function Home() {
   return (
@@ -74,6 +76,8 @@ export default function Home() {
           </div>
         </ScrollReveal>
         <VideosDestaque />
+        <Parceiros/>
+        <Equipe/>
       </div>
     </>
   );
