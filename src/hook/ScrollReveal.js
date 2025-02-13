@@ -1,5 +1,4 @@
 import { useEffect, useRef } from "react";
-import "@/styles/ScrollReveal.module.css";
 
 export default function ScrollReveal({ children, className = "" }) {
   const ref = useRef(null);
@@ -12,9 +11,9 @@ export default function ScrollReveal({ children, className = "" }) {
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("visible");
+            node.classList.add("visible");
           } else {
-            entry.target.classList.remove("visible");
+            node.classList.remove("visible");
           }
         });
       },
@@ -28,5 +27,9 @@ export default function ScrollReveal({ children, className = "" }) {
     };
   }, []);
 
-  return <div ref={ref} className={`fade-in ${className}`}>{children}</div>;
+  return (
+    <div ref={ref} className={`fade-in ${className}`}>
+      {children}
+    </div>
+  );
 }
