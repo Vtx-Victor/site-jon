@@ -1,5 +1,5 @@
 import { useEffect, useRef } from "react";
-import "@/styles/scrollReveal.css"; // ajuste o caminho conforme sua estrutura
+import "@/styles/ScrollReveal.module.css";
 
 export default function ScrollReveal({ children, className = "" }) {
   const ref = useRef(null);
