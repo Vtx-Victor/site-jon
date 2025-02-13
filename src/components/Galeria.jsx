@@ -1,5 +1,6 @@
 import { useState } from "react";
 import styles from "@/styles/Galeria.module.css";
+import ScrollReveal from "@/hook/ScrollReveal";
 
 const imagesData = [
   { id: 1, category: "identidade visual", src: "/img/ec89aec6-46b4-4d24-b8e3-feccd9f2615b.webp" },
@@ -35,35 +36,37 @@ export default function Gallery() {
   const imagesToShow = showAllImages ? filteredImages : filteredImages.slice(0, 8);
 
   return (
-    <div className={styles.galleryContainer}>
-      <div className={styles.filterButtons}>
-        {categories.map((category, index) => (
-          <button
-            key={index}
-            className={`${styles.button} ${selectedCategory === category ? styles.active : ""}`}
-            onClick={() => setSelectedCategory(category)}
-          >
-            {category.toUpperCase()}
-          </button>
-        ))}
+    <ScrollReveal>
+      <div className={styles.galleryContainer}>
+        <div className={styles.filterButtons}>
+          {categories.map((category, index) => (
+            <button
+              key={index}
+              className={`${styles.button} ${selectedCategory === category ? styles.active : ""}`}
+              onClick={() => setSelectedCategory(category)}
+            >
+              {category.toUpperCase()}
+            </button>
+          ))}
+        </div>
+        {/* Utiliza a propriedade key para forçar re-mount e disparar a animação */}
+        <div
+          key={showAllImages ? "all" : "partial"}
+          className={`${styles.imageGrid} ${showAllImages ? styles.animateContainer : ""}`}
+        >
+          {imagesToShow.map((image) => (
+            <div key={image.id} className={styles.imageCard}>
+              <img src={image.src} alt={`Imagem ${image.id}`} />
+            </div>
+          ))}
+        </div>
+        <button
+          onClick={() => setShowAllImages(!showAllImages)}
+          className={styles.viewMoreButton}
+        >
+          {showAllImages ? "Ver menos" : "Ver mais"}
+        </button>
       </div>
-      {/* Utiliza a propriedade key para forçar re-mount e disparar a animação */}
-      <div
-        key={showAllImages ? "all" : "partial"}
-        className={`${styles.imageGrid} ${showAllImages ? styles.animateContainer : ""}`}
-      >
-        {imagesToShow.map((image) => (
-          <div key={image.id} className={styles.imageCard}>
-            <img src={image.src} alt={`Imagem ${image.id}`} />
-          </div>
-        ))}
-      </div>
-      <button
-        onClick={() => setShowAllImages(!showAllImages)}
-        className={styles.viewMoreButton}
-      >
-        {showAllImages ? "Ver menos" : "Ver mais"}
-      </button>
-    </div>
+    </ScrollReveal>
   );
 }

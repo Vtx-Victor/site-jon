@@ -1,8 +1,8 @@
-// components/GaleriaVideos.js
+import { useState } from "react";
 import styles from "@/styles/GaleriaVideos.module.css";
+import ScrollReveal from "@/hook/ScrollReveal";
 
 const GaleriaVideos = () => {
-  // Lista de vídeos (coloque os vídeos na pasta public)
   const videos = [
     "/videos/video1.mp4",
     "/videos/video2.mp4",
@@ -14,17 +14,30 @@ const GaleriaVideos = () => {
     "/videos/video5.mp4",
   ];
 
+  const [showAllVideos, setShowAllVideos] = useState(false);
+  const videosToShow = showAllVideos ? videos : videos.slice(0, 4);
+
   return (
-    <div className={styles.gallery}>
-      {videos.map((video, index) => (
-        <div key={index} className={styles.videoContainer}>
-          <video controls autoPlay loop muted className={styles.video}>
-            <source src={video} type="video/mp4" />
-            Seu navegador não suporta vídeos.
-          </video>
+    <ScrollReveal>
+      <div className={styles.container}>
+        <div className={styles.gallery}>
+          {videosToShow.map((video, index) => (
+            <div key={index} className={styles.videoContainer}>
+              <video controls autoPlay loop muted className={styles.video}>
+                <source src={video} type="video/mp4" />
+                Seu navegador não suporta vídeos.
+              </video>
+            </div>
+          ))}
         </div>
-      ))}
-    </div>
+        <button
+          onClick={() => setShowAllVideos(!showAllVideos)}
+          className={styles.viewMoreButton}
+        >
+          {showAllVideos ? "Ver menos" : "Ver mais"}
+        </button>
+      </div>
+    </ScrollReveal>
   );
 };
 

@@ -27,6 +27,24 @@
     object-fit: cover;
   }
   
+  .viewMoreButton {
+    display: block;
+    margin: 15px auto 0 auto;
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 30px;
+    transition: background 0.3s ease;
+  }
+  
+  .viewMoreButton:hover {
+    background-color: #005bb5;
+  }
+  
   /* Responsividade: Se a tela for menor, reduz para 2 vídeos por linha */
   @media (max-width: 1024px) {
     .gallery {

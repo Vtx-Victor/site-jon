@@ -29,6 +29,23 @@
     object-fit: cover; /* Mantém a proporção sem distorcer */
     border-radius: 15px;
   }
+
+  .viewMoreButton {
+    display: block;
+    margin: 30px auto 20px; /* 30px no topo e automático nas laterais */
+    background-color: #0070f3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+  
+  .viewMoreButton:hover {
+    background-color: #005bb5;
+  }
   
   /* Responsividade: Ajusta para telas menores */
   @media (max-width: 1024px) {
