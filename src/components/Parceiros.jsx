@@ -14,18 +14,6 @@ export default function Parceiros() {
                         Nossos valiosos Parceiros:
                     </h2>
                     </div>
-                    <Image>
-
-                    </Image>
-                    <Image>
-
-                    </Image>
-                    <Image>
-
-                    </Image>
-                    <Image>
-
-                    </Image>
                 </div>
             </div>
             </ScrollReveal>
