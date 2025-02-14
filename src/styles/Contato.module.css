@@ -1,0 +1,79 @@
+.contatoContainer {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f8f8f8;
+  }
+  
+  .titulo {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .formularioContainer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  
+  /* Estilo do vídeo */
+  .videoContainer {
+    flex: 1;
+    max-width: 350px;
+  }
+  
+  .video {
+    width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Estilo do formulário */
+  .formulario {
+    flex: 1;
+    max-width: 400px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .formulario input,
+  .formulario textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .formulario textarea {
+    resize: none;
+    height: 100px;
+  }
+  
+  .formulario button {
+    background-color: #000;
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .status {
+    margin-top: 10px;
+    font-size: 14px;
+    color: green;
+  }
+  
+  /* Rodapé */
+  .rodape {
+    margin-top: 50px;
+    background-color: #e0e0e0;
+    padding: 20px;
+  }
+  
+  .socialIcons img {
+    width: 30px;
+    margin: 0 10px;
+    cursor: pointer;
+  }
+  

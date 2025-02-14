@@ -9,6 +9,8 @@
     background-size: cover;
     color: white;
     overflow: hidden;
+    height: 66vh;
+
   }
   
   .equipeSection::before {
@@ -34,15 +36,16 @@
     margin-bottom: 30px;
   }
   
-  /* Container dos Cards */
+
   .equipeContainer {
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 45vh;
     gap: 50px;
     flex-wrap: wrap;
   }
   
-  /* Card de cada membro */
   .card {
     display: flex;
     margin-top: 50px;
@@ -51,7 +54,7 @@
     text-align: center;
   }
   
-  /* Imagem do Membro */
+
   .foto {
     width: 250px;
     height: 250px;
@@ -65,13 +68,13 @@
     transform: scale(1.1);
   }
   
-  /* Nome */
+
   .nome {
     font-size: 18px;
     margin-top: 10px;
   }
   
-  /* Cargo */
+
   .cargo {
     font-size: 14px;
     color: #aaa;

@@ -2,16 +2,15 @@ import { useState, useEffect } from 'react';
 import styles from '@/styles/Typewriter.module.css';
 
 const Typewriter = () => {
-  // Array com as palavras que serão exibidas dinamicamente
+
   const words = ["visão", "solução", "transformação"];
   const prefix = "Designer é ";
 
-  // Configurações de tempo (em milissegundos)
-  const typingSpeed = 70;       // Velocidade de digitação
-  const deletingSpeed = 70;     // Velocidade do apagamento
-  const delayBetweenWords = 2000; // Pausa quando a palavra está completa
+ 
+  const typingSpeed = 70;      
+  const deletingSpeed = 70;     
+  const delayBetweenWords = 2000; 
 
-  // Estados para controlar a palavra atual, a posição do caractere e se está apagando
   const [wordIndex, setWordIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

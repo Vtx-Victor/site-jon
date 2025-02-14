@@ -9,6 +9,8 @@ import Link from "next/link";
 import ScrollReveal from "@/hooks/ScrollReveal";
 import Parceiros from "@/components/Parceiros";
 import Equipe from "@/components/Equipe";
+import SobreMim from "@/components/SobreMim";
+import Contato from "@/components/Contato";
 
 export default function Home() {
   return (
@@ -78,6 +80,8 @@ export default function Home() {
         <VideosDestaque />
         <Parceiros/>
         <Equipe/>
+        <SobreMim/>
+        <Contato/>
       </div>
     </>
   );
