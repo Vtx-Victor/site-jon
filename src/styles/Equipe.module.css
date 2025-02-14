@@ -1,83 +1,140 @@
 .equipeSection {
-    position: relative;
-    text-align: center;
-    padding: 50px 20px;
-    background-image: url('/img/BG FUNDO/bg 2.png');
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    color: white;
-    overflow: hidden;
-    height: 66vh;
+  position: relative;
+  text-align: center;
+  padding: 50px 20px;
+  background-image: url('/img/BG FUNDO/bg 2.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
+  overflow: hidden;
+  height: 66vh;
 
-  }
-  
-  .equipeSection::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.8); 
-    backdrop-filter: blur(2px);
-    z-index: 0;
-  }
-  
+}
 
-  .equipeSection * {
-    position: relative;
-    z-index: 1;
-  }
+.equipeSection::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
 
-  .titulo {
-    font-size: 24px;
-    margin-bottom: 30px;
+
+.equipeSection * {
+  position: relative;
+  z-index: 1;
+}
+
+.titulo {
+  font-size: 24px;
+  margin-bottom: 30px;
+}
+
+
+.equipeContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45vh;
+  gap: 50px;
+  flex-wrap: wrap;
+}
+
+.card {
+  display: flex;
+  margin-top: 50px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+.foto {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  transition: transform 0.3s ease;
+}
+
+.foto:hover {
+  transform: scale(1.1);
+}
+
+
+.nome {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+
+.cargo {
+  font-size: 14px;
+  color: #aaa;
+  margin-top: 5px;
+}
+
+
+@media (max-width: 1024px) {
+  .equipeSection {
+    height: auto;
+    padding: 40px 15px;
   }
-  
 
   .equipeContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 45vh;
-    gap: 50px;
-    flex-wrap: wrap;
+    height: auto;
   }
-  
-  .card {
-    display: flex;
-    margin-top: 50px;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+}
+
+@media (max-width: 768px) {
+  .titulo {
+    font-size: 20px;
   }
-  
 
   .foto {
-    width: 250px;
-    height: 250px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid rgba(255, 255, 255, 0.2);
-    transition: transform 0.3s ease;
+    width: 200px;
+    height: 200px;
   }
-  
-  .foto:hover {
-    transform: scale(1.1);
-  }
-  
 
   .nome {
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: 16px;
   }
-  
 
   .cargo {
-    font-size: 14px;
-    color: #aaa;
-    margin-top: 5px;
+    font-size: 12px;
   }
-  
+
+  .equipeContainer {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .titulo {
+    font-size: 18px;
+  }
+
+  .foto {
+    width: 150px;
+    height: 150px;
+  }
+
+  .nome {
+    font-size: 14px;
+  }
+
+  .cargo {
+    font-size: 12px;
+  }
+
+  .equipeSection {
+    padding: 30px 10px;
+  }
+}

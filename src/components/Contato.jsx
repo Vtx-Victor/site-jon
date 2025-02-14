@@ -36,14 +36,14 @@ const Contato = () => {
         }
     };
 
+
     return (
         <section className={styles.contatoContainer}>
             <h2 className={styles.titulo}>Vamos trabalhar juntos?</h2>
             <div className={styles.formularioContainer}>
-                {/* Vídeo */}
                 <div className={styles.videoContainer}>
                     <video autoPlay loop muted className={styles.video}>
-                        <source src="/videos/sample.mp4" type="video/mp4" />
+                        <source src="/videos/lebron-james-lebron.mp4" type="video/mp4" />
                         Seu navegador não suporta o vídeo.
                     </video>
                 </div>
