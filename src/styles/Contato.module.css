@@ -1,79 +1,143 @@
 .contatoContainer {
     text-align: center;
-    padding: 50px 20px;
+
     background-color: #f8f8f8;
-  }
-  
-  .titulo {
-    font-size: 24px;
-    margin-bottom: 20px;
-  }
-  
-  .formularioContainer {
+}
+
+
+.titulo {
+    padding-top: 20px;
+    font-size: 28px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    color: #333;
+}
+
+.formularioContainer {
     display: flex;
     justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
     align-items: center;
-  }
-  
-  /* Estilo do vídeo */
-  .videoContainer {
+    max-width: 1000px;
+    margin: auto;
+}
+
+
+.videoContainer {
     flex: 1;
-    max-width: 350px;
-  }
-  
-  .video {
+    max-width: 400px;
+}
+
+.video {
     width: 100%;
     border-radius: 10px;
-  }
-  
-  /* Estilo do formulário */
-  .formulario {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+
+.formulario {
     flex: 1;
     max-width: 400px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
-  }
-  
-  .formulario input,
-  .formulario textarea {
+    gap: 15px;
+}
+
+
+.formulario input,
+.formulario textarea {
     width: 100%;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 5px;
-  }
-  
-  .formulario textarea {
+    border-radius: 8px;
+    font-size: 16px;
+    transition: border 0.3s ease-in-out;
+}
+
+
+.formulario input:focus,
+.formulario textarea:focus {
+    border: 1px solid #0070f3;
+    outline: none;
+}
+
+
+.formulario textarea {
     resize: none;
-    height: 100px;
-  }
-  
-  .formulario button {
-    background-color: #000;
+    height: 120px;
+}
+
+
+.formulario button {
+    background-color: #0070f3;
     color: white;
-    padding: 10px;
+    padding: 12px;
     border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
     cursor: pointer;
-  }
-  
-  .status {
+    transition: background 0.3s ease-in-out, transform 0.2s ease;
+}
+
+.formulario button:hover {
+    background-color: #005bb5;
+    transform: scale(1.05);
+}
+
+
+.status {
     margin-top: 10px;
     font-size: 14px;
     color: green;
-  }
-  
-  /* Rodapé */
-  .rodape {
+}
+
+
+.rodape {
     margin-top: 50px;
     background-color: #e0e0e0;
-    padding: 20px;
-  }
-  
-  .socialIcons img {
-    width: 30px;
-    margin: 0 10px;
+    padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+    /* Mantém os itens empilhados */
+    align-items: center;
+    gap: 10px;
+    /* Ajuste o espaçamento entre os itens */
+}
+
+.socialIcons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 10px;
+    /* Reduz espaço extra abaixo dos ícones */
+}
+
+.icon {
+    font-size: 30px;
+    color: #333;
+    transition: color 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-  }
-  
+}
+
+.icon:hover {
+    color: #0070f3;
+    transform: scale(1.2);
+}
+
+
+@media (max-width: 768px) {
+    .formularioContainer {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .videoContainer {
+        max-width: 100%;
+    }
+
+    .formulario {
+        max-width: 100%;
+    }
+}
