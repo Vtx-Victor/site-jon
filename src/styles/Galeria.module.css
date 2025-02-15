@@ -4,14 +4,6 @@
   text-align: center;
 }
 
-/* Wrapper para os filtros e o hamburger */
-.filtersWrapper {
-  position: relative;
-  display: flex;
-  justify-content: flex-end;
-  align-items: center;
-}
-
 .hamburger {
   display: none;
   cursor: pointer;
@@ -29,20 +21,19 @@
   transform: scale(1.1);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
-/* Filtros */
 .filterButtons {
   display: flex;
   gap: 10px;
   margin-bottom: 20px;
+  justify-content: center;
 }
 
 .button {
   background: linear-gradient(300deg, #4e54c8, #8f94fb, #ef77d0);
   background-size: 200% 200%;
   border: 1px solid transparent;
-  width: 150px;
+  width: 200px;
   height: 40px;
-  display: inline-flex;
   align-items: center;
   justify-content: center;
   color: white;
@@ -124,6 +115,12 @@
 @media (max-width: 768px) {
   .hamburger {
     display: block;
+  }
+  .filtersWrapper {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
   .filterButtons {
     display: none;

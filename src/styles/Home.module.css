@@ -1,10 +1,10 @@
 .gradientText {
-  background: linear-gradient(90deg, #ff3d3d, #ff3d3d, #ffd700, #87cefa, #0070f3);
+  background: linear-gradient(98deg, #ff3d3d, #ffd700 ,#0070f3 ,#87cefa,#0070f3, #0070f3);
   -webkit-background-clip: text;
   -moz-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3.6rem;
+  font-size: 4rem;
   font-weight: 200;
   display: block;
 }
@@ -23,7 +23,7 @@
 .content {
   max-width: 800px;
   margin: 0 auto;
-}
+} 
 .heading {
   font-size: 3.7rem;
   line-height: 1.2;
@@ -151,8 +151,5 @@
   }
   .subtitle2 {
     font-size: 1rem;
-  }
-  .gradientText {
-    font-size: 2.9rem;
   }
 }

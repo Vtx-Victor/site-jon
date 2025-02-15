@@ -1,6 +1,6 @@
 .gallery {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 vídeos por linha em telas grandes */
+  grid-template-columns: repeat(4, 1fr);
   gap: 15px;
   justify-content: center;
   margin-top: 20px;

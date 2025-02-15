@@ -13,7 +13,7 @@ const GaleriaVideos = () => {
   ];
 
   const [showAllVideos, setShowAllVideos] = useState(false);
-  const videosToShow = showAllVideos ? videos : videos.slice(0, 3);
+  const videosToShow = showAllVideos ? videos : videos.slice(1, 5);
 
   return (
     <ScrollReveal>
