@@ -7,37 +7,41 @@
   font-size: 3.6rem;
   font-weight: 200;
   display: block;
-
 }
 
+/* Outros estilos já existentes... */
 .container {
   color: #fff;
   min-height: 100vh;
   display: flex;
-  margin-left: 25%;
   align-items: center;
+  padding: 0 5%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .content {
   max-width: 800px;
+  margin: 0 auto;
 }
-
 .heading {
   font-size: 3.7rem;
   line-height: 1.2;
   margin-bottom: 20px;
-  width: 48%;
+  width: 100%;
 }
 
-.subtitle{
+.subtitle {
   display: flex;
-  width: 60%;
-  height: 9vh;
+  width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+  justify-content: center;
 }
 
 .button {
   background: linear-gradient(90deg, #0070f3, #ff3d3d);
-  background-size: 200% auto; /* Permite animar a posição do background */
+  background-size: 200% auto;
   border: none;
   padding: 10px 20px;
   color: white;
@@ -45,31 +49,33 @@
   border-radius: 8px;
   cursor: pointer;
   transition: transform 0.3s ease, background-position 0.3s ease, box-shadow 0.3s ease;
+  margin: 20px 0;
 }
 
 .button:hover {
-  background-position: right center; /* Move o gradiente para criar o efeito de transição */
-  transform: scale(1.05);           /* Aumenta levemente o botão */
-  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3); /* Adiciona uma sombra suave */
+  background-position: right center;
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
 }
-.descriçao{
-  display: flex;
-  width: 50vw;
-  justify-content: end;
 
+.descriçao {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
 }
 
 .description {
   display: flex;
-  width: 40%;
+  width: 100%;
   text-align: justify;
   font-size: 1rem;
   line-height: 1.5;
   color: #a6a6a6;
+  margin: 0 auto;
 }
 
 .containertiulo2 {
-  padding: 50px;
+  padding: 50px 20px;
   text-align: center;
 }
 
@@ -83,10 +89,70 @@
   font-weight: 200;
   display: block;
   background-size: 100%;
+  margin-bottom: 20px;
 }
 
 .subtitle2 {
   color: #ffffff;
   font-size: 1.2rem;
   margin-top: 30px;
+  text-align: center;
+}
+
+/* Media Queries para Responsividade */
+
+/* Para tablets e telas até 1024px */
+@media (max-width: 1024px) {
+  .heading {
+    font-size: 3.2rem;
+  }
+  .button {
+    font-size: 1.1rem;
+    padding: 8px 18px;
+  }
+}
+
+/* Para dispositivos móveis (telas até 768px) */
+@media (max-width: 768px) {
+  .heading {
+    font-size: 2.8rem;
+  }
+  .subtitle {
+    flex-direction: column;
+    align-items: center;
+  }
+  .button {
+    font-size: 1rem;
+    padding: 8px 16px;
+  }
+  .descriçao {
+    justify-content: center;
+  }
+  .description {
+    width: 90%;
+    font-size: 0.9rem;
+  }
+}
+
+/* Para dispositivos muito pequenos (telas até 480px) */
+@media (max-width: 480px) {
+  .heading {
+    font-size: 2.4rem;
+  }
+  .button {
+    font-size: 0.9rem;
+    padding: 6px 14px;
+  }
+  .containertiulo2 {
+    padding: 30px 10px;
+  }
+  .gradientTexttilulo2 {
+    font-size: 2.8rem;
+  }
+  .subtitle2 {
+    font-size: 1rem;
+  }
+  .gradientText {
+    font-size: 2.9rem;
+  }
 }

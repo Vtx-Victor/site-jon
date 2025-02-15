@@ -4,9 +4,34 @@
   text-align: center;
 }
 
+/* Wrapper para os filtros e o hamburger */
+.filtersWrapper {
+  position: relative;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #fff;
+  background: linear-gradient(45deg, #4e54c8, #8f94fb);
+  border: none;
+  padding: 8px 12px;
+  margin-bottom: 9px;
+  border-radius: 5px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hamburger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+/* Filtros */
 .filterButtons {
   display: flex;
-  justify-content: center;
   gap: 10px;
   margin-bottom: 20px;
 }
@@ -15,8 +40,8 @@
   background: linear-gradient(300deg, #4e54c8, #8f94fb, #ef77d0);
   background-size: 200% 200%;
   border: 1px solid transparent;
-  width: 200px;
-  height: 50px;
+  width: 150px;
+  height: 40px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
@@ -26,7 +51,7 @@
   cursor: pointer;
   transition: background-position 0.5s ease, background-color 0.3s ease,
     transform 0.3s ease, box-shadow 0.3s ease;
-  margin: 10px;
+  margin: 5px;
 }
 
 .button:hover {
@@ -43,19 +68,17 @@
   border: 1px solid #ffffff;
 }
 
+/* Grid para a galeria de imagens: 3 imagens por linha */
 .imageGrid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  width: 80vw;
-  margin-left: 9%;
-  height: auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin: 0 auto;
+  width: 80vw; /* Largura reduzida para deixar as imagens menores */
 }
 
 .imageCard {
-  width: calc(25% - 10px);
-  margin: 5px;
-  height: 400px;
+  height: 200px;
   overflow: hidden;
 }
 
@@ -94,5 +117,33 @@
   to {
     opacity: 1;
     transform: translateY(0);
+  }
+}
+
+/* Exibição do hamburger e filtros em telas menores */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block;
+  }
+  .filterButtons {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    z-index: 10;
+  }
+  .activeFilters {
+    display: flex;
+  }
+}
+
+/* Em telas muito pequenas, reduz a altura das imagens */
+@media (max-width: 480px) {
+  .imageCard {
+    height: 150px;
   }
 }

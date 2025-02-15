@@ -27,6 +27,7 @@ const categories = [
 export default function Gallery() {
   const [selectedCategory, setSelectedCategory] = useState("todos");
   const [showAllImages, setShowAllImages] = useState(false);
+  const [showFilters, setShowFilters] = useState(false);
 
   const filteredImages =
     selectedCategory === "todos"
@@ -38,18 +39,25 @@ export default function Gallery() {
   return (
     <ScrollReveal>
       <div className={styles.galleryContainer}>
-        <div className={styles.filterButtons}>
-          {categories.map((category, index) => (
-            <button
-              key={index}
-              className={`${styles.button} ${selectedCategory === category ? styles.active : ""}`}
-              onClick={() => setSelectedCategory(category)}
-            >
-              {category.toUpperCase()}
-            </button>
-          ))}
+        <div className={styles.filtersWrapper}>
+          <div className={styles.hamburger} onClick={() => setShowFilters(!showFilters)}>
+            &#9776;
+          </div>
+          <div className={`${styles.filterButtons} ${showFilters ? styles.activeFilters : ""}`}>
+            {categories.map((category, index) => (
+              <button
+                key={index}
+                className={`${styles.button} ${selectedCategory === category ? styles.active : ""}`}
+                onClick={() => {
+                  setSelectedCategory(category);
+                  setShowFilters(false); 
+                }}
+              >
+                {category.toUpperCase()}
+              </button>
+            ))}
+          </div>
         </div>
-        {/* Utiliza a propriedade key para forçar re-mount e disparar a animação */}
         <div
           key={showAllImages ? "all" : "partial"}
           className={`${styles.imageGrid} ${showAllImages ? styles.animateContainer : ""}`}

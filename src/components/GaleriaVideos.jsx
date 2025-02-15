@@ -8,19 +8,17 @@ const GaleriaVideos = () => {
     "/videos/video2.mp4",
     "/videos/video3.mp4",
     "/videos/video4.mp4",
-    "/videos/video5.mp4",
     "/videos/video3.mp4",
     "/videos/video4.mp4",
-    "/videos/video5.mp4",
   ];
 
   const [showAllVideos, setShowAllVideos] = useState(false);
-  const videosToShow = showAllVideos ? videos : videos.slice(0, 4);
+  const videosToShow = showAllVideos ? videos : videos.slice(0, 3);
 
   return (
     <ScrollReveal>
       <div className={styles.container}>
-        <div className={styles.gallery}>
+        <div className={`${styles.gallery} ${showAllVideos ? styles.expanded : ""}`}>
           {videosToShow.map((video, index) => (
             <div key={index} className={styles.videoContainer}>
               <video controls autoPlay loop muted className={styles.video}>

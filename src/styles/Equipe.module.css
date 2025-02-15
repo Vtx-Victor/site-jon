@@ -1,7 +1,7 @@
 .equipeSection {
   position: relative;
   text-align: center;
-  padding: 50px 20px;
+  padding: clamp(30px, 5vw, 50px) clamp(15px, 2vw, 20px);
   background-image: url('/img/BG FUNDO/bg 2.png');
   background-attachment: fixed;
   background-position: center;
@@ -9,8 +9,7 @@
   background-size: cover;
   color: white;
   overflow: hidden;
-  height: 66vh;
-
+  min-height: 66vh; /* mínimo para garantir boa visibilidade */
 }
 
 .equipeSection::before {
@@ -25,39 +24,40 @@
   z-index: 0;
 }
 
-
 .equipeSection * {
   position: relative;
   z-index: 1;
 }
 
 .titulo {
-  font-size: 24px;
-  margin-bottom: 30px;
+  font-size: clamp(18px, 2.5vw, 24px);
+  margin-bottom: clamp(20px, 4vw, 30px);
 }
-
 
 .equipeContainer {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 45vh;
-  gap: 50px;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+  gap: clamp(20px, 4vw, 50px);
+  width: 100%;
+  margin: 0 auto;
 }
 
 .card {
   display: flex;
-  margin-top: 50px;
   flex-direction: column;
   align-items: center;
   text-align: center;
+  flex: 1 1 300px; /* define um tamanho mínimo e permite crescer */
+  max-width: 350px;
+  margin-top: clamp(20px, 4vw, 50px);
 }
 
-
 .foto {
-  width: 250px;
-  height: 250px;
+  width: 100%;
+  max-width: 250px;
+  aspect-ratio: 1/1; /* garante que a imagem permaneça quadrada */
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid rgba(255, 255, 255, 0.2);
@@ -65,76 +65,59 @@
 }
 
 .foto:hover {
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
-
 .nome {
-  font-size: 18px;
+  font-size: clamp(16px, 2vw, 18px);
   margin-top: 10px;
 }
 
-
 .cargo {
-  font-size: 14px;
+  font-size: clamp(12px, 1.5vw, 14px);
   color: #aaa;
   margin-top: 5px;
 }
 
-
+/* Ajustes para telas até 1024px */
 @media (max-width: 1024px) {
   .equipeSection {
-    height: auto;
     padding: 40px 15px;
   }
-
-  .equipeContainer {
-    height: auto;
+  .card {
+    margin-top: 30px;
   }
 }
 
+/* Ajustes para telas até 768px */
 @media (max-width: 768px) {
+  .equipeSection {
+    padding: 35px 10px;
+  }
   .titulo {
-    font-size: 20px;
+    font-size: clamp(16px, 3vw, 20px);
   }
-
   .foto {
-    width: 200px;
-    height: 200px;
+    max-width: 200px;
   }
-
-  .nome {
-    font-size: 16px;
-  }
-
-  .cargo {
-    font-size: 12px;
-  }
-
-  .equipeContainer {
-    gap: 30px;
+  .card {
+    flex: 1 1 250px;
   }
 }
 
+/* Ajustes para telas até 480px */
 @media (max-width: 480px) {
-  .titulo {
-    font-size: 18px;
-  }
-
-  .foto {
-    width: 150px;
-    height: 150px;
-  }
-
-  .nome {
-    font-size: 14px;
-  }
-
-  .cargo {
-    font-size: 12px;
-  }
-
   .equipeSection {
     padding: 30px 10px;
+  }
+  .titulo {
+    font-size: clamp(14px, 4vw, 18px);
+  }
+  .foto {
+    max-width: 150px;
+  }
+  .card {
+    flex: 1 1 100%;
+    max-width: none;
   }
 }
